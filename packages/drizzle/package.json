@@ -1,0 +1,26 @@
+{
+  "name": "@repo/drizzle",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./src/repositories/*": "./src/repositories/*.ts",
+    "./src/types.ts": "./src/types.ts"
+  },
+  "scripts": {
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate",
+    "seed": "bun ./src/seed.ts"
+  },
+  "dependencies": {
+    "postgres": "^3.4.4",
+    "drizzle-orm": "^0.33.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/bun": "^1.1.6",
+    "dotenv": "^16.0.3",
+    "drizzle-kit": "^0.24.0",
+    "typescript": "^5.0.2"
+  }
+}

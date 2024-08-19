@@ -5,7 +5,11 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "ui:add": "bun --filter @repo/ui ui:add",
+    "migrate:generate": "bun --filter @repo/drizzle generate",
+    "migrate": "bun --filter @repo/drizzle migrate",
+    "seed": "bun --filter @repo/drizzle seed"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
@@ -19,5 +23,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "eslint": "^9.9.0"
+  }
 }

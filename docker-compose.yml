@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  db:
+    build: .
+    container_name: tanner_vitalize_playground
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
